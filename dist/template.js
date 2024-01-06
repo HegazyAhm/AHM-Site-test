@@ -17,13 +17,6 @@ sidebarBtn.addEventListener("click", function (event) {
   }
 });
 
-pageWrapper.addEventListener("click", function (event) {
-  if (sidebarBox.classList.contains("active")) {
-    sidebarBtn.classList.remove("active");
-    sidebarBox.classList.remove("active");
-  }
-});
-
 window.addEventListener("keydown", function (event) {
   if (sidebarBox.classList.contains("active") && event.keyCode === 27) {
     sidebarBtn.classList.remove("active");
@@ -99,21 +92,7 @@ window.addEventListener("keydown", function (event) {
 //   exampleshow.classList.add("Times-New-Roman");
 // });
 
-let goToTop = document.querySelector(".gototop");
-
-window.onscroll = function () {
-  if (window.scrollY >= 1000) {
-    goToTop.style.display = "block";
-  }
-  if (window.scrollY <= 1000) {
-    goToTop.style.display = "none";
-  }
-};
-
-goToTop.onclick = function () {
-  window.scrollTo({
-    left: 0,
-    top: 0,
-    behavior: "smooth",
-  });
-};
+const CSD = document.querySelectorAll("#CSD");
+CSD[0].addEventListener("click", function () {
+  window.open("links/mostafa/soso.html");
+});
